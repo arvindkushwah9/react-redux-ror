@@ -1,0 +1,9 @@
+<%= form_with(model: @patient, local: true, multipart: true,class: "form-inline") do |form| %>
+  <label for="file">Upload CSV file:</label>
+  <%= file_field_tag :file, class: "form-control", required: true %> 
+  <%= form.submit "Import Patients", class: "btn btn-primary" %>
+<% end %>
+<hr/>
+
+<%= react_component("App") %>
+
